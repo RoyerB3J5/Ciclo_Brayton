@@ -59,7 +59,36 @@ function Section_4({loading, dataApi, referencia,reiniciar}) {
             )}
             
           </div>
-          <button className=" bg-red-800 py-3 px-3 sm:px-7 rounded-lg mt-4 hover:cursor-pointer hover:scale-105 transition-all text-white" onClick={reiniciar}>VOLVER A INTENTAR</button>
+          <h2 className=" font-semibold text-3xl mt-10">Tablas</h2>
+          <hr className="w-[250px] border-t-4 border-red-800 mb-6"/>
+          <div className="overflow-x-auto w-full  max-w-[300px] sm:max-w-[1100px] flex sm:justify-center items-center">
+              <table className="w-full max-w-[1100px] table-auto shadow-lg border-collapse  p-5">
+                <thead className="bg-red-800 text-white">
+                  <tr>
+                    <th className="px-4 py-5 border">N</th>
+                    <th className="px-4 py-5 border">Temperatura (C)</th>
+                    <th className="px-4 py-5 border">Presión (kPa)</th>
+                    <th className="px-4 py-5 border">V. específico (m^3/kg)</th>
+                    <th className="px-4 py-5 border">Entalpía (kJ/kg)</th>
+                    <th className="px-4 py-5 border">Entropía (kJ/kg.K)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 bg-gray-50">
+                  {dataApi.calculos.map((calculo, index) => (
+                    <tr key={index}>
+                      <td className="px-4 py-5 border font-normal text-center">{index + 1}</td>
+                      <td className="px-4 py-5 border font-normal text-center">{calculo[`t_${index + 1}`]}</td>
+                      <td className="px-4 py-5 border font-normal text-center">{calculo[`p_${index + 1}`]}</td>
+                      <td className="px-4 py-5 border font-normal text-center">{calculo[`v_${index + 1}`]}</td>
+                      <td className="px-4 py-5 border font-normal text-center">{calculo[`h_${index + 1}`]}</td>
+                      <td className="px-4 py-5 border font-normal text-center">{calculo[`s_${index + 1}`]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+
+          </div>
+          <button className=" bg-red-800 py-3 px-3 sm:px-7 rounded-lg mt-6 hover:cursor-pointer hover:scale-105 transition-all text-white" onClick={reiniciar}>VOLVER A INTENTAR</button>
         </>
       )}
     </section>
