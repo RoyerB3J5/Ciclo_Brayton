@@ -103,7 +103,7 @@ function Formulario() {
         <h2 className=" font-semibold text-2xl md:text-3xl">Ingresa los datos</h2>
         <form action="" className=" flex flex-col gap-4 border-4 py-5 px-3 sm:px-8 rounded-3xl items-start justify-center  w-full max-w-[250px] sm:max-w-[400px] border-red-800">
           <div className=" flex flex-col items-start justify-center gap-2 w-full">
-            <label htmlFor="t_1" className=" text-lg font-medium">Temperatura de entrada (C) :</label>
+            <label htmlFor="t_1" className=" text-lg font-medium">Temperatura de entrada (ºC) :</label>
             <input type="number" id="t_1" className=" rounded-md p-1 px-2 w-full no-arrows" inputMode="numeric" value={valueInner.t_1} onChange={setValue} min={15} max={1700} />
             {errors.t_1 && <p className="text-red-500 text-xs">{errors.t_1}</p>}
           </div>
@@ -123,7 +123,7 @@ function Formulario() {
             {errors.pr && <p className="text-red-500 text-xs">{errors.pr}</p>}
           </div>
           <div className=" flex flex-col items-start justify-center gap-2 w-full">
-            <label htmlFor="t_ent" className=" text-lg font-medium">Temperatura de regenerador (C):</label>
+            <label htmlFor="t_ent" className=" text-lg font-medium">Temperatura de regenerador (ºC):</label>
             <input type="number" id="t_ent" className=" rounded-md p-1 px-2 w-full no-arrows" inputMode="numeric" value={valueInner.t_ent} onChange={setValue} min={15}/>
             {errors.t_ent && <p className="text-red-500 text-xs">{errors.t_ent}</p>}
           </div>

@@ -66,7 +66,7 @@ function Section_4({loading, dataApi, referencia,reiniciar}) {
                 <thead className="bg-red-800 text-white">
                   <tr>
                     <th className="px-4 py-5 border">N</th>
-                    <th className="px-4 py-5 border">Temperatura (C)</th>
+                    <th className="px-4 py-5 border">Temperatura (ºC)</th>
                     <th className="px-4 py-5 border">Presión (kPa)</th>
                     <th className="px-4 py-5 border">V. específico (m^3/kg)</th>
                     <th className="px-4 py-5 border">Entalpía (kJ/kg)</th>
