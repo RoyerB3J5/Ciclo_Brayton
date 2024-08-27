@@ -14,7 +14,7 @@ function Section_4({loading, dataApi, referencia,reiniciar}) {
               <li>Trabajo Neto = {dataApi.w_neto} kJ/kg</li>
               <li>Calor de entrada total = {dataApi.q_in} kJ/kg</li>
               <li>Eficiencia = {dataApi.n}</li>
-              <li>Potencia = {dataApi.pot} kW</li>
+              <li>Potencia = {dataApi.pot} MW</li>
               <li>Razon de Trabajo = {dataApi.r_w}</li>
             </ul>
           </div>
