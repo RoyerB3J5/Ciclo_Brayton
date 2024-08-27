@@ -62,7 +62,7 @@ function Formulario() {
     };
     setLoading(true)
     try {
-      const response = await fetch(`${URL}api/resultado/`, {
+      const response = await fetch(`${URL}/api/resultado/`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
