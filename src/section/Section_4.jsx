@@ -75,6 +75,15 @@ function Section_4({loading, dataApi, referencia,reiniciar}) {
                 />
               </div>
             )}
+            {dataApi.image_rw_pr && (
+              <div className="flex justify-center w-full lg:w-auto">
+                <img
+                  src={`data:image/png;base64,${dataApi.image_rw_pr}`}
+                  alt="rw-pr Diagram"
+                  className="w-full max-w-[350px] md:max-w-[400px] lg:max-w-[550px] object-cover"
+                />
+              </div>
+            )}
             
           </div>
           <h2 className=" font-semibold text-3xl mt-10">Tablas</h2>
