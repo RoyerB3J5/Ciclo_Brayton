@@ -43,8 +43,8 @@ function Formulario() {
       error='El valor debe estar entre 100 kPa y 2000 kPa'
     } else if (id===q_ent && (value<300 || value>2000)){
       error='El valor debe estar entre 300 kJ/kg y 2000 kJ/kg'
-    } else if(id===pr && (value<2 || value>30)){
-      error='El valor debe estar entre 2 y 30'
+    } else if(id===pr && (value<2 || value>100)){
+      error='El valor debe estar entre 2 y 100'
     } else if(id===t_ent && (value<15)){
       error='El valor debe ser mayor a 15C'
     }
@@ -119,7 +119,7 @@ function Formulario() {
           </div>
           <div className=" flex flex-col items-start justify-center gap-2 w-full">
             <label htmlFor="pr" className=" text-lg font-medium">Relación de presiones:</label>
-            <input type="number" id="pr" className=" rounded-md p-1 px-2 w-full no-arrows" inputMode="numeric" value={valueInner.pr} onChange={setValue} min={2} max={30}/>
+            <input type="number" id="pr" className=" rounded-md p-1 px-2 w-full no-arrows" inputMode="numeric" value={valueInner.pr} onChange={setValue} min={2} max={100}/>
             {errors.pr && <p className="text-red-500 text-xs">{errors.pr}</p>}
           </div>
           <div className=" flex flex-col items-start justify-center gap-2 w-full">
